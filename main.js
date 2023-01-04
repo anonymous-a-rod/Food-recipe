@@ -1,6 +1,10 @@
 const searchForm = document.querySelector("form");
 const searchResultDiv = document.querySelector(".search-result");
 const container = document.querySelector(".container");
+const body = document.querySelector("body");
+const span = document.querySelectorAll("span");
+const ul = document.querySelectorAll("ul");
+
 let searchQuery = "";
 const APP_ID = "9f3e955c";
 const APP_KEY = "697e39fbda613a7ed6247705abf91c3d";
@@ -16,7 +20,7 @@ let cusineCheckList = document.getElementById("list3");
 let macrosCheckList = document.getElementById("list4");
 let diet = document.querySelectorAll(".diet");
 let diets = [];
-let dietType = '';
+let dietType = "";
 let allergy = document.querySelectorAll(".allergies");
 let allergies = [];
 let healthLabel = "";
@@ -50,6 +54,9 @@ async function fetchAPI() {
 function generateHTML(results) {
   container.classList.remove("initial");
   next.classList.remove("initial");
+  body.classList.remove("initial");
+  span.forEach((item) => item.classList.remove("initial"));
+  ul.forEach((item) => item.classList.remove("initial"));
   let generatedHTML = "";
   results.map((result) => {
     generatedHTML += `
