@@ -56,6 +56,7 @@ function generateHTML(results) {
   container.classList.remove("initial");
   next.classList.remove("initial");
   body.classList.remove("initial");
+  searchIcon.classList.remove("initial-icon");
   span.forEach((item) => item.classList.remove("initial"));
   ul.forEach((item) => item.classList.remove("initial"));
   let generatedHTML = "";

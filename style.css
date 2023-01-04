@@ -24,6 +24,8 @@ img {
   object-fit: cover;
 }
 
+
+
 section {
   min-height: 100vh;
   width: 100%;
@@ -65,12 +67,19 @@ form input {
   font-size: 2rem;
   display: inline-block;
 }
+
 form ion-icon {
   width: 9%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: -9px;
   color: rgb(75, 75, 75);
+  cursor: pointer;
 }
+
+form ion-icon.initial-icon{
+  font-size: 3rem;
+}
+
 
 .search-result {
   margin-top: 50px;
@@ -181,6 +190,10 @@ input[type="checkbox"] {
   margin-right: 4px;
 }
 
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
 .dropdown-check-list {
   position: relative;
   display: inline-block;
@@ -275,4 +288,7 @@ input[type="checkbox"] {
   .dropdown-check-list.visible .items.initial {
     width: 105px;
   }
+  form ion-icon.initial-icon{
+  font-size: 2.5rem;
+}
 }
