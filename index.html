@@ -27,54 +27,208 @@
           <ion-icon id="search-icon" name="search"></ion-icon>
         </form>
         <div id="selections">
-        <div id="list1" class="dropdown-check-list" tabindex="100">
-          <span class="anchor">Diet</span>
-          <ul class="items">
-            <li><input class="diet" type="checkbox" value="balanced"/><label>Balanced</label></li>
-            <li><input class="diet" type="checkbox" value="low-carb" />Low-Carb</li>
-            <li><input class="diet" type="checkbox" value="low-fat" />Low-Fat</li>
-            <li><input class="diet" type="checkbox" value="paleo" />Paleo</li>
-            <li><input class="diet" type="checkbox" value="vegan" />Vegan</li>
-            <li><input class="diet" type="checkbox" value="vegetarian" />Vegetarian</li>
+          <div id="list1" class="dropdown-check-list" tabindex="100">
+            <span class="anchor">Diet</span>
+            <ul class="items">
+              <li>
+                <input class="diet" type="checkbox" value="fodmap-free" /><label
+                  >FODMAP</label
+                >
+              </li>
+              <li>
+                <input class="diet" type="checkbox" value="keto-friendly" />Keto
+              </li>
+              <li><input class="diet" type="checkbox" value="paleo" />Paleo</li>
+              <li>
+                <input
+                  class="diet"
+                  type="checkbox"
+                  value="pescatarian"
+                />Pescatarian
+              </li>
+              <li><input class="diet" type="checkbox" value="vegan" />Vegan</li>
+              <li>
+                <input
+                  class="diet"
+                  type="checkbox"
+                  value="vegetarian"
+                />Vegetarian
+              </li>
+            </ul>
+          </div>
 
-          </ul>
+          <div id="list2" class="dropdown-check-list" tabindex="100">
+            <span class="anchor">Allergies</span>
+            <ul class="items">
+              <li>
+                <input
+                  class="allergies"
+                  type="checkbox"
+                  value="dairy-free"
+                />Dairy
+              </li>
+              <li>
+                <input class="allergies" type="checkbox" value="egg-free" />Eggs
+              </li>
+              <li>
+                <input
+                  class="allergies"
+                  type="checkbox"
+                  value="fish-free"
+                />Fish
+              </li>
+              <li>
+                <input
+                  class="allergies"
+                  type="checkbox"
+                  value="gluten-free"
+                />Gluten
+              </li>
+              <li>
+                <input
+                  class="allergies"
+                  type="checkbox"
+                  value="lupine-free"
+                />Lupine
+              </li>
+              <li>
+                <input
+                  class="allergies"
+                  type="checkbox"
+                  value="mustard-free"
+                />Mustard
+              </li>
+              <li>
+                <input
+                  class="allergies"
+                  type="checkbox"
+                  value="peanut-free"
+                />Peanuts
+              </li>
+              <li>
+                <input
+                  class="allergies"
+                  type="checkbox"
+                  value="sesame-free"
+                />Sesame
+              </li>
+              <li>
+                <input
+                  class="allergies"
+                  type="checkbox"
+                  value="shellfish-free"
+                />Shellfish
+              </li>
+              <li>
+                <input class="allergies" type="checkbox" value="soy-free" />Soy
+              </li>
+              <li>
+                <input
+                  class="allergies"
+                  type="checkbox"
+                  value="tree-nut-free"
+                />Tree Nuts
+              </li>
+              <li>
+                <input
+                  class="allergies"
+                  type="checkbox"
+                  value="wheat-free"
+                />Wheat
+              </li>
+            </ul>
+          </div>
+
+          <div id="list3" class="dropdown-check-list" tabindex="100">
+            <span class="anchor">Cuisine</span>
+            <ul class="items">
+              <li>
+                <input
+                  class="cuisine"
+                  type="checkbox"
+                  value="american"
+                />American
+              </li>
+              <li>
+                <input class="cuisine" type="checkbox" value="asian" />Asian
+              </li>
+              <li>
+                <input class="cuisine" type="checkbox" value="british" />British
+              </li>
+              <li>
+                <input class="cuisine" type="checkbox" value="chinese" />Chinese
+              </li>
+              <li>
+                <input class="cuisine" type="checkbox" value="french" />French
+              </li>
+              <li>
+                <input class="cuisine" type="checkbox" value="indian" />Indian
+              </li>
+              <li>
+                <input class="cuisine" type="checkbox" value="italian" />Italian
+              </li>
+              <li>
+                <input
+                  class="cuisine"
+                  type="checkbox"
+                  value="japanese"
+                />Japanese
+              </li>
+              <li>
+                <input
+                  class="cuisine"
+                  type="checkbox"
+                  value="mediterranean"
+                />Mediterranean
+              </li>
+              <li>
+                <input class="cuisine" type="checkbox" value="mexican" />Mexican
+              </li>
+            </ul>
+          </div>
+
+          <div id="list4" class="dropdown-check-list" tabindex="100">
+            <span class="anchor">Macros</span>
+            <ul class="items">
+              <li>
+                <input class="macros" type="checkbox" value="balanced" /><label
+                  >Balanced</label
+                >
+              </li>
+              <li>
+                <input
+                  class="macros"
+                  type="checkbox"
+                  value="high-fiber"
+                />High-Fiber
+              </li>
+              <li>
+                <input
+                  class="macros"
+                  type="checkbox"
+                  value="high-protein"
+                />High-Protein
+              </li>
+              <li>
+                <input
+                  class="macros"
+                  type="checkbox"
+                  value="low-carb"
+                />Low-Carb
+              </li>
+              <li>
+                <input class="macros" type="checkbox" value="low-fat" />Low-Fat
+              </li>
+              <li>
+                <input
+                  class="macros"
+                  type="checkbox"
+                  value="low-sodium"
+                />Low-Sodium
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <div id="list2" class="dropdown-check-list" tabindex="100">
-          <span class="anchor">Allergies</span>
-          <ul class="items">
-            <li><input type="checkbox" />Dairy</li>
-            <li><input type="checkbox" />Eggs</li>
-            <li><input type="checkbox" />Fish</li>
-            <li><input type="checkbox" />Gluten</li>
-            <li><input type="checkbox" />Lupine</li>
-            <li><input type="checkbox" />Mustard</li>
-            <li><input type="checkbox" />Peanuts</li>
-            <li><input type="checkbox" />Sesame</li>
-            <li><input type="checkbox" />Shellfish</li>
-            <li><input type="checkbox" />Soy</li>
-            <li><input type="checkbox" />Tree Nuts</li>
-            <li><input type="checkbox" />Wheat</li>
-          </ul>
-        </div>
-
-        <div id="list3" class="dropdown-check-list" tabindex="100">
-          <span class="anchor">Cuisine</span>
-          <ul class="items">
-            <li><input type="checkbox" />American</li>
-            <li><input type="checkbox" />Asian</li>
-            <li><input type="checkbox" />British</li>
-            <li><input type="checkbox" />Chinese</li>
-            <li><input type="checkbox" />French</li>
-            <li><input type="checkbox" />Indian</li>
-            <li><input type="checkbox" />Italian</li>
-            <li><input type="checkbox" />Japanese</li>
-            <li><input type="checkbox" />Mediterranean</li>
-            <li><input type="checkbox" />Mexican</li>
-          </ul>
-        </div>
-
-    </div>
         <div class="search-result">
           <!-- <div class="item">
             <img src="/assets/stock1.jpeg" alt="" />

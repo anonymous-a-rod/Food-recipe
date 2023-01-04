@@ -13,27 +13,19 @@ const previous = document.querySelector(".previous");
 let dietCheckList = document.getElementById("list1");
 let allergiesCheckList = document.getElementById("list2");
 let cusineCheckList = document.getElementById("list3");
-
-let allergies = "";
-let cusine = "";
-let diets = [];
-
+let macrosCheckList = document.getElementById("list4");
 let diet = document.querySelectorAll(".diet");
-
-diet.forEach((checkbox) => {
-  checkbox.addEventListener("change", (event) => {
-    if (event.target.checked) {
-      diets.push(event.target.value);
-      console.log(diets);
-    } else {
-      diets.pop(event.target.value);
-    }
-  });
-});
-
-
-
-
+let diets = [];
+let dietType = '';
+let allergy = document.querySelectorAll(".allergies");
+let allergies = [];
+let healthLabel = "";
+let cuisine = document.querySelectorAll(".cuisine");
+let cuisines = [];
+let cuisineType = "";
+let macro = document.querySelectorAll(".macros");
+let macros = [];
+let macroType = "";
 
 searchForm.addEventListener("submit", search);
 searchIcon.addEventListener("click", search);
@@ -46,7 +38,8 @@ function search(e) {
 }
 
 async function fetchAPI() {
-  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_KEY}&to=${to}&from=${from}`;
+  searchFilters();
+  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_KEY}&to=${to}&from=${from}${cuisineType}${healthLabel}${dietType}${macroType}`;
   const response = await fetch(baseURL);
   data = await response.json();
   generateHTML(data.hits);
@@ -85,6 +78,84 @@ function generateHTML(results) {
   searchResultDiv.innerHTML = generatedHTML;
 }
 
+function searchFilters() {
+  if (cuisines.length !== 0) {
+    cuisineType = "&cuisineType=" + cuisines.join("&cuisineType=");
+    console.log(cuisineType);
+  } else {
+    cuisineType = "";
+  }
+
+  if (allergies.length !== 0) {
+    healthLabel = "&health=" + allergies.join("&health=");
+    console.log(healthLabel);
+  } else {
+    healthLabel = "";
+  }
+
+  if (diets.length !== 0) {
+    dietType = "&health=" + diets.join("&health=");
+    console.log(dietType);
+  } else {
+    dietType = "";
+  }
+
+  if (macros.length !== 0) {
+    macroType = "&diet=" + macros.join("&diet=");
+    console.log(dietType);
+  } else {
+    macroType = "";
+  }
+}
+
+diet.forEach((checkbox) => {
+  checkbox.addEventListener("change", (event) => {
+    if (event.target.checked) {
+      diets.push(event.target.value);
+      console.log(diets);
+    } else {
+      diets.pop(event.target.value);
+      console.log(diets);
+    }
+  });
+});
+
+allergy.forEach((checkbox) => {
+  checkbox.addEventListener("change", (event) => {
+    if (event.target.checked) {
+      allergies.push(event.target.value);
+      console.log(allergies);
+    } else {
+      allergies.pop(event.target.value);
+      console.log(allergies);
+    }
+  });
+});
+
+cuisine.forEach((checkbox) => {
+  checkbox.addEventListener("change", (event) => {
+    if (event.target.checked) {
+      cuisines.push(event.target.value);
+      console.log(cuisines);
+    } else {
+      cuisines.pop(event.target.value);
+      console.log(cuisines);
+    }
+  });
+});
+
+macro.forEach((checkbox) => {
+  checkbox.addEventListener("change", (event) => {
+    if (event.target.checked) {
+      macros.push(event.target.value);
+      console.log(macros);
+    } else {
+      macros.pop(event.target.value);
+      console.log(macros);
+    }
+  });
+});
+
 dietCheckList.getElementsByClassName("anchor")[0].onclick = function () {
   if (dietCheckList.classList.contains("visible")) {
     dietCheckList.classList.remove("visible");
@@ -103,6 +174,12 @@ cusineCheckList.getElementsByClassName("anchor")[0].onclick = function () {
   if (cusineCheckList.classList.contains("visible"))
     cusineCheckList.classList.remove("visible");
   else cusineCheckList.classList.add("visible");
+};
+
+macrosCheckList.getElementsByClassName("anchor")[0].onclick = function () {
+  if (macrosCheckList.classList.contains("visible"))
+    macrosCheckList.classList.remove("visible");
+  else macrosCheckList.classList.add("visible");
 };
 
 next.addEventListener("click", function () {
