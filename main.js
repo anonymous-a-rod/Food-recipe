@@ -52,6 +52,7 @@ async function fetchAPI() {
 }
 
 function generateHTML(results) {
+  hideAllCheckLists();
   container.classList.remove("initial");
   next.classList.remove("initial");
   body.classList.remove("initial");
@@ -167,27 +168,44 @@ dietCheckList.getElementsByClassName("anchor")[0].onclick = function () {
   if (dietCheckList.classList.contains("visible")) {
     dietCheckList.classList.remove("visible");
   } else {
+    hideAllCheckLists();
     dietCheckList.classList.add("visible");
   }
 };
 
 allergiesCheckList.getElementsByClassName("anchor")[0].onclick = function () {
-  if (allergiesCheckList.classList.contains("visible"))
+  if (allergiesCheckList.classList.contains("visible")) {
     allergiesCheckList.classList.remove("visible");
-  else allergiesCheckList.classList.add("visible");
+  } else {
+    hideAllCheckLists();
+    allergiesCheckList.classList.add("visible");
+  }
 };
 
 cusineCheckList.getElementsByClassName("anchor")[0].onclick = function () {
-  if (cusineCheckList.classList.contains("visible"))
+  if (cusineCheckList.classList.contains("visible")) {
     cusineCheckList.classList.remove("visible");
-  else cusineCheckList.classList.add("visible");
+  } else {
+    hideAllCheckLists();
+    cusineCheckList.classList.add("visible");
+  }
 };
 
 macrosCheckList.getElementsByClassName("anchor")[0].onclick = function () {
-  if (macrosCheckList.classList.contains("visible"))
+  if (macrosCheckList.classList.contains("visible")) {
     macrosCheckList.classList.remove("visible");
-  else macrosCheckList.classList.add("visible");
+  } else {
+    hideAllCheckLists();
+    macrosCheckList.classList.add("visible");
+  }
 };
+
+function hideAllCheckLists() {
+  macrosCheckList.classList.remove("visible");
+  cusineCheckList.classList.remove("visible");
+  allergiesCheckList.classList.remove("visible");
+  dietCheckList.classList.remove("visible");
+}
 
 next.addEventListener("click", function () {
   if (data.count > to) {

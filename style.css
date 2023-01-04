@@ -110,7 +110,8 @@ form ion-icon {
 .view-link {
   text-decoration: none;
   text-align: center;
-  width: 130px;
+  min-width: 135px;
+  width: 135px;
   padding: 10px 0;
   background-color: #404041;
   color: white;
@@ -157,6 +158,12 @@ form ion-icon {
   color: white;
   font-size: 1.4rem;
   margin: 10px;
+  border: none;
+}
+
+.next:hover,
+.previous:hover {
+  cursor: pointer;
 }
 
 .next.initial,
