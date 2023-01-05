@@ -24,8 +24,6 @@ img {
   object-fit: cover;
 }
 
-
-
 section {
   min-height: 100vh;
   width: 100%;
@@ -68,18 +66,26 @@ form input {
   display: inline-block;
 }
 
-form ion-icon {
-  width: 9%;
-  font-size: 2.5rem;
-  margin: -9px;
+#search-btn {
+  font-size: 2rem;
+  margin-top: 12px;
+  margin-left: 0px;
+  height: 50px;
   color: rgb(75, 75, 75);
   cursor: pointer;
+  border: none;
+  background-color: inherit;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: inherit;
 }
 
-form ion-icon.initial-icon{
-  font-size: 3rem;
+#search-btn.initial-icon {
+  font-size: 3.5rem;
+  margin-top: 25px;
+  margin-left: 10px;
+  background-color: inherit;
 }
-
 
 .search-result {
   margin-top: 50px;
@@ -288,7 +294,60 @@ input[type="checkbox"]:hover {
   .dropdown-check-list.visible .items.initial {
     width: 105px;
   }
-  form ion-icon.initial-icon{
-  font-size: 2.5rem;
+  #search-btn.initial-icon {
+    font-size: 2rem;
+    margin-top: 12px;
+    margin-left: 0px;
+    height: 50px;
+  }
 }
+
+@media (max-width: 600px) {
+  .search-result {
+    grid-gap: 10px;
+  }
+  .container.initial .brand {
+    font-size: 4rem;
+  }
+  .container.initial form {
+    max-width: 500px;
+  }
+  .container.initial form input {
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+  body .initial {
+    font-size: 10px;
+  }
+  .dropdown-check-list {
+    margin: 0 2px;
+  }
+  .dropdown-check-list .anchor {
+    width: 90px;
+  }
+  .dropdown-check-list.visible .items {
+    width: 90px;
+  }
+  .dropdown-check-list .anchor.initial {
+    width: 90px;
+  }
+  .dropdown-check-list.visible .items.initial {
+    width: 90px;
+  }
+  form input {
+    font-size: 1rem;
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 50px;
+    order: 10;
+  }
+  #search-btn,
+  #search-btn.initial-icon {
+    margin: 0px;
+    background-color: inherit;
+  }
+  #search-icon {
+    margin-top: 10px;
+    margin-right: 5px;
+  }
 }

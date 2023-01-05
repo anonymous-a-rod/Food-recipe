@@ -1,5 +1,6 @@
 const searchForm = document.querySelector("form");
 const searchResultDiv = document.querySelector(".search-result");
+const searchBtn = document.querySelector("#search-btn");
 const container = document.querySelector(".container");
 const body = document.querySelector("body");
 const span = document.querySelectorAll("span");
@@ -32,7 +33,6 @@ let macros = [];
 let macroType = "";
 
 searchForm.addEventListener("submit", search);
-searchIcon.addEventListener("click", search);
 
 function search(e) {
   e.preventDefault();
@@ -53,6 +53,7 @@ async function fetchAPI() {
 
 function generateHTML(results) {
   hideAllCheckLists();
+  searchBtn.classList.remove("initial-icon");
   container.classList.remove("initial");
   next.classList.remove("initial");
   body.classList.remove("initial");
