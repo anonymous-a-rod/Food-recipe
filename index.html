@@ -23,36 +23,66 @@
       <div class="container initial">
         <h1 class="brand">Recipe App</h1>
         <form>
-          <input id="searchQuery" type="text" placeholder="Search Your Recipe..." /> 
-          <button id="search-btn" type="submit" class="initial-icon"><ion-icon type="submit" id="search-icon" name="search"></ion-icon></button>
+          <input
+            id="searchQuery"
+            type="text"
+            placeholder="Search Your Recipe..."
+          />
+          <button id="search-btn" type="submit" class="initial-icon">
+            <ion-icon type="submit" id="search-icon" name="search"></ion-icon>
+          </button>
         </form>
         <div id="selections">
           <div id="list1" class="dropdown-check-list" tabindex="100">
             <span class="anchor initial">Diet</span>
             <ul class="items initial">
               <li>
-                <input class="diet" type="checkbox" value="fodmap-free" /><label
-                  >FODMAP</label
-                >
+                <input
+                  class="diet"
+                  type="checkbox"
+                  value="fodmap-free"
+                  id="fodmap"
+                /><label for="fodmap">FODMAP</label>
               </li>
               <li>
-                <input class="diet" type="checkbox" value="keto-friendly" />Keto
+                <input
+                  class="diet"
+                  type="checkbox"
+                  value="keto-friendly"
+                  id="keto"
+                /><label for="keto">Keto</label>
               </li>
-              <li><input class="diet" type="checkbox" value="paleo" />Paleo</li>
+              <li>
+                <input
+                  class="diet"
+                  type="checkbox"
+                  value="paleo"
+                  id="paleo"
+                /><label for="paleo">Paleo</label>
+              </li>
               <li>
                 <input
                   class="diet"
                   type="checkbox"
                   value="pescatarian"
-                />Pescatarian
+                  id="pescatarian"
+                /><label for="pescatarian">Pescatarian</label>
               </li>
-              <li><input class="diet" type="checkbox" value="vegan" />Vegan</li>
+              <li>
+                <input
+                  class="diet"
+                  type="checkbox"
+                  value="vegan"
+                  id="vegan"
+                /><label for="vegan">Vegan</label>
+              </li>
               <li>
                 <input
                   class="diet"
                   type="checkbox"
                   value="vegetarian"
-                />Vegetarian
+                  id="vegetarian"
+                /><label for="vegetarian">Vegetarian</label>
               </li>
             </ul>
           </div>
@@ -65,76 +95,96 @@
                   class="allergies"
                   type="checkbox"
                   value="dairy-free"
-                />Dairy
+                  id="dairy"
+                /><label for="dairy">Dairy</label>
               </li>
               <li>
-                <input class="allergies" type="checkbox" value="egg-free" />Eggs
+                <input
+                  class="allergies"
+                  type="checkbox"
+                  value="egg-free"
+                  id="eggs"
+                /><label for="eggs">Eggs</label>
               </li>
               <li>
                 <input
                   class="allergies"
                   type="checkbox"
                   value="fish-free"
-                />Fish
+                  id="fish"
+                /><label for="fish">Fish</label>
               </li>
               <li>
                 <input
                   class="allergies"
                   type="checkbox"
                   value="gluten-free"
-                />Gluten
+                  id="gluten"
+                /><label for="gluten">Gluten</label>
               </li>
               <li>
                 <input
                   class="allergies"
                   type="checkbox"
                   value="lupine-free"
-                />Lupine
+                  id="lupine"
+                /><label for="lupine">Lupine</label>
               </li>
               <li>
                 <input
                   class="allergies"
                   type="checkbox"
                   value="mustard-free"
-                />Mustard
+                  id="mustard"
+                /><label for="mustard">Mustard</label>
               </li>
               <li>
                 <input
                   class="allergies"
                   type="checkbox"
                   value="peanut-free"
-                />Peanuts
+                  id="peanuts"
+                /><label for="peanuts">Peanuts</label>
               </li>
               <li>
                 <input
                   class="allergies"
                   type="checkbox"
                   value="sesame-free"
-                />Sesame
+                  id="sesame"
+                /><label for="sesame">Sesame</label>
               </li>
               <li>
                 <input
                   class="allergies"
                   type="checkbox"
                   value="shellfish-free"
-                />Shellfish
+                  id="shellfish"
+                /><label for="shellfish">Shellfish</label>
               </li>
               <li>
-                <input class="allergies" type="checkbox" value="soy-free" />Soy
+                <input
+                  class="allergies"
+                  type="checkbox"
+                  value="soy-free"
+                  id="soy-free"
+                /><label for="soy-free">Soy</label>
               </li>
               <li>
                 <input
                   class="allergies"
                   type="checkbox"
                   value="tree-nut-free"
-                />Tree Nuts
+                  id="tree-nut"
+                /><label for="tree-nut">Tree Nuts</label>
               </li>
               <li>
                 <input
                   class="allergies"
                   type="checkbox"
                   value="wheat-free"
-                />Wheat
+                  id="wheat"
+                /><label for="wheat">Wheat</label>
               </li>
             </ul>
           </div>
@@ -147,42 +197,80 @@
                   class="cuisine"
                   type="checkbox"
                   value="american"
-                />American
+                  id="american"
+                /><label for="american">American</label>
               </li>
               <li>
-                <input class="cuisine" type="checkbox" value="asian" />Asian
+                <input
+                  class="cuisine"
+                  type="checkbox"
+                  value="asian"
+                  id="asian"
+                /><label for="asian">Asian</label>
               </li>
               <li>
-                <input class="cuisine" type="checkbox" value="british" />British
+                <input
+                  class="cuisine"
+                  type="checkbox"
+                  value="british"
+                  id="british"
+                /><label for="british">British</label>
               </li>
               <li>
-                <input class="cuisine" type="checkbox" value="chinese" />Chinese
+                <input
+                  class="cuisine"
+                  type="checkbox"
+                  value="chinese"
+                  id="chinese"
+                /><label for="chinese">Chinese</label>
               </li>
               <li>
-                <input class="cuisine" type="checkbox" value="french" />French
+                <input
+                  class="cuisine"
+                  type="checkbox"
+                  value="french"
+                  id="french"
+                /><label for="french">French</label>
               </li>
               <li>
-                <input class="cuisine" type="checkbox" value="indian" />Indian
+                <input
+                  class="cuisine"
+                  type="checkbox"
+                  value="indian"
+                  id="indian"
+                /><label for="indian">Indian</label>
               </li>
               <li>
-                <input class="cuisine" type="checkbox" value="italian" />Italian
+                <input
+                  class="cuisine"
+                  type="checkbox"
+                  value="italian"
+                  id="italian"
+                /><label for="italian">Italian</label>
               </li>
               <li>
                 <input
                   class="cuisine"
                   type="checkbox"
                   value="japanese"
-                />Japanese
+                  id="japanese"
+                /><label for="japanese">Japanese</label>
               </li>
               <li>
                 <input
                   class="cuisine"
                   type="checkbox"
                   value="mediterranean"
-                />Mediterranean
+                  id="mediterranean"
+                /><label for="mediterranean">Mediterranean</label>
               </li>
               <li>
-                <input class="cuisine" type="checkbox" value="mexican" />Mexican
+                <input
+                  class="cuisine"
+                  type="checkbox"
+                  value="mexican"
+                  id="mexican"
+                /><label for="mexican">Mexican</label>
               </li>
             </ul>
           </div>
@@ -191,40 +279,52 @@
             <span class="anchor initial">Macros</span>
             <ul class="items initial">
               <li>
-                <input class="macros" type="checkbox" value="balanced" /><label
-                  >Balanced</label
-                >
+                <input
+                  class="macros"
+                  type="checkbox"
+                  value="balanced"
+                  id="balanced"
+                /><label for="balanced">Balanced</label>
               </li>
               <li>
                 <input
                   class="macros"
                   type="checkbox"
                   value="high-fiber"
-                />High-Fiber
+                  id="high-fiber"
+                /><label for="high-fiber">High-Fiber</label>
               </li>
               <li>
                 <input
                   class="macros"
                   type="checkbox"
                   value="high-protein"
-                />High-Protein
+                  id="high-protein"
+                /><label for="high-protein">High-Protein</label>
               </li>
               <li>
                 <input
                   class="macros"
                   type="checkbox"
                   value="low-carb"
-                />Low-Carb
+                  id="low-carb"
+                /><label for="low-carb">Low-Carb</label>
               </li>
               <li>
-                <input class="macros" type="checkbox" value="low-fat" />Low-Fat
+                <input
+                  class="macros"
+                  type="checkbox"
+                  value="low-fat"
+                  id="low-fat"
+                /><label for="low-fat">Low-Fat</label>
               </li>
               <li>
                 <input
                   class="macros"
                   type="checkbox"
                   value="low-sodium"
-                />Low-Sodium
+                  id="low-sodium"
+                /><label for="low-sodium">Low-Sodium</label>
               </li>
             </ul>
           </div>
