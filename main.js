@@ -33,12 +33,15 @@ let macros = [];
 let macroType = "";
 
 searchForm.addEventListener("submit", search);
+searchForm.addEventListener("click", hideAllCheckLists);
 
 function search(e) {
   e.preventDefault();
   searchQuery = e.target.querySelector("input").value;
   console.log(searchQuery);
-  fetchAPI();
+  if (searchQuery !== "") {
+    fetchAPI();
+  }
 }
 
 async function fetchAPI() {
