@@ -317,22 +317,22 @@ input[type="checkbox"]:hover {
     font-size: 1.5rem;
   }
   body .initial {
-    font-size: 10px;
+    font-size: 9.5px;
   }
   .dropdown-check-list {
     margin: 0 2px;
   }
   .dropdown-check-list .anchor {
-    width: 90px;
+    width: 92px;
   }
   .dropdown-check-list.visible .items {
-    width: 90px;
+    width: 92px;
   }
   .dropdown-check-list .anchor.initial {
-    width: 90px;
+    width: 92px;
   }
   .dropdown-check-list.visible .items.initial {
-    width: 90px;
+    width: 92px;
   }
   form input {
     font-size: 1rem;
