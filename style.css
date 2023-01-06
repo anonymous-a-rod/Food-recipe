@@ -323,16 +323,16 @@ input[type="checkbox"]:hover {
     margin: 0 2px;
   }
   .dropdown-check-list .anchor {
-    width: 92px;
+    width: 94px;
   }
   .dropdown-check-list.visible .items {
-    width: 92px;
+    width: 94px;
   }
   .dropdown-check-list .anchor.initial {
-    width: 92px;
+    width: 94px;
   }
   .dropdown-check-list.visible .items.initial {
-    width: 92px;
+    width: 94px;
   }
   form input {
     font-size: 1rem;
