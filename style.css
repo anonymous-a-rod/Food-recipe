@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
 
+
 *,
 *::before,
 *::after {
@@ -40,6 +41,8 @@ section {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* INITIAL INPUT FORM  */
 
 .brand {
   text-align: center;
@@ -86,6 +89,8 @@ form input {
   margin-left: 10px;
   background-color: inherit;
 }
+
+/* CARDS */
 
 .search-result {
   margin-top: 50px;
@@ -155,6 +160,8 @@ form input {
   font-size: 3rem;
 }
 
+/* NEXT PAGE AND PREVIOUS PAGE */
+
 .buttons {
   margin-left: auto;
   display: flex;
@@ -185,6 +192,9 @@ form input {
 .previous.initial {
   display: none;
 }
+
+
+/* CHOOSE FILTERS FOR SEARCH  */
 
 #selections {
   display: flex;
@@ -264,6 +274,8 @@ input[type="checkbox"]:hover {
 .dropdown-check-list.visible .items.initial {
   width: 180px;
 }
+
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 768px) {
   .search-result {
